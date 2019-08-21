@@ -1,0 +1,28 @@
+<ul class="tree">
+    <li>
+        <span pai>BackEnd</span>
+        <ul>
+            <li>node.js</li>
+            <li>bd.sql</li>
+        </ul>
+    </li>
+    <li>
+        <span pai>FrontEnd</span>
+        <ul>
+            <li>estilo.css</li>
+            <li>index.html</li>
+            <li>action.js</li>
+        </ul>
+    </li>
+</ul>
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[pai]').forEach(query =>{
+        query.onclick = e =>{
+            const prox = query.nextElementSibling
+            const displayAtual = prox.style.display
+            //console.log(displayAtual)
+            prox.style.display = displayAtual === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
